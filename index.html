@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 
+  Copyright 2014, J. Pol
+ 
+  This file is part of free software: you can redistribute it and/or modify it under the terms of the
+  GNU General Public License as published by the Free Software Foundation.
+  
+  This package is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+  See the GNU General Public License for more details. A copy of the GNU General Public License is
+  available at <http://www.gnu.org/licenses/>.
+ -->
+    <title>DiBL polar grid</title>
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="polar-grids.css">
+    <script type="text/javascript" src="polar-grids.js"></script>
+</head>
+<body onload="dibl.PolarGrid().main(document.getElementById('container'))">
+
+  <h1>Polar Grids for Bobbin Lace</h1>
+
+  <form action="" target="_blank">
+	 <p>Try one of the linked examples or fill in the the form.</p>
+      <label for="diameters">Diameters (mm) </label>
+      <fieldset id="diameters">
+          <label for="outerDiameter">outside </label><input id="outerDiameter" name="outerDiameter" type="number" required min="20" autofocus>
+          <br/>
+          <label for="innerDiameter">inside </label><input id="innerDiameter" name="innerDiameter" type="number" required min="10">
+      </fieldset><br/>
+      <label for="density">Dots per ring </label>
+      <fieldset id="density">
+          <label for="dotsPerRing"></label><input id="dotsPerRing" name="dotsPerRing" type="number" required min="12">
+      </fieldset><br/>
+      <label for="style">Style </label>
+      <fieldset id="style">
+          <label for="angle">angle (degrees) </label><input id="angle" name="angle" type="number" required min="10" max="80" value="45">
+          <br/>
+          <label for="angle">pattern of dots </label><input id="dotPattern" name="dotPattern" list="dotPatterns" value="1" pattern="[012]+(,[012]+)*">
+      </fieldset><br/>
+      <datalist id="dotPatterns">
+          <option value="011,101,211,101,011,121"></option>
+          <option value="1,1210,1,1012"></option>
+      </datalist>
+      <br/>
+      <button class="button" type="submit">draw</button>
+      <a class="button" href="#help">help</a>
+  </form>
+  <div>
+      <p>
+        The examples with B-numbers match "<span lang="de">Viele Gute Gr&uuml;nde</span>" by Ulrike L&ouml;hr.
+      </p>
+      <ul>
+        <li>
+            <a href="?">default</a>
+        </li>
+        <li>Basic Torchon / Flanders:
+            <a href="?angle=45#B1">B1</a>
+        </li>
+        <li>Torchon:
+            <a href="?dotPattern=1,0,10,0&angle=45#Vierge">Vierge</a>,
+            <a href="?dotPattern=1,0&angle=45#Slavic">Slavic Vierge</a>,
+            <a href="?dotPattern=1,10,1,01&angle=45#Honeycomb">Honeycomb</a>
+        </li>
+        <li>Small snowflakes:
+            <a href="?dotPattern=1,0&angle=49#B2">B2</a>
+        </li>
+        <li>Binche/Duchesse:
+            <a href="?dotPattern=1,10,1,01&angle=63#B3">B3</a>,
+            <a href="?dotPattern=011,101,211,101,011,121&angle=63#B4">B4-B6</a>,
+            <a href="?dotPattern=1,1210,1,1012&angle=63#B7">B7</a>
+        </li>
+        <li>Rotated hexagons:
+            with <a href="?dotPattern=1,10,1,01&angle=30">triangles</a>,
+            with <a href="?dotPattern=1,002,1,1,020,1&angle=30">circles</a>,
+            with
+            <a href="?angle=30&dotPattern=1,1210,1,01,1,1012,1,01">triangles and circles</a>
+        </li>
+      </ul>
+    </div>
+    <div id="container"><p>Please allow the javascipt to download and execute, or try one of the links above.</p></div>
+  <div>
+    <a name="help"/><h1>Hints and explanations</h1>
+
+    <p>Source code: <a href="https://github.com/jo-pol/DiBL/tree/master/web/grids/src/main/scala/dibl">script</a>, 
+        <a href="https://github.com/jo-pol/DiBL/blob/gh-pages/polar-grids.html">page</a>,
+        see also <a href="https://lihaoyi.github.io/hands-on-scala-js/#GettingStarted">Hands-on Scala.js</a>
+    </p>
+
+    <h2>Print preview</h2>
+
+    <p>Use the print preview function of your browser to select the page with the grid.
+        Print with landscape orientation to get the full URL. Thus you get the information to reproduce the grid on the sheet.
+    </p>
+
+    <h2>Angles / Examples</h2>
+
+    <p>Ulrike L&ouml;hr specifies the angles relative to the top of a patch of lace, while this application applies the angle to the footside of the doily edging.
+        So we have to subtract Ulrike's angles from 90 degrees.
+    </p>
+
+
+    <h2>Diameters</h2>
+
+    <p>The unit for the diameters is mm when printed at 100% or DPI.
+        The size on screen might vary from monitor to monitor.
+        The actual inner value might be larger.
+    </p>
+
+    <h2>Dots per ring</h2>
+
+    <p>A dotPattern may introduce repeat factors. The desired pattern of lace may also introduce repeat factors. The number of dots should be a multitude of
+        the repeat factor(s) to prevent irregularities where the end of the grid or piece of lace meets the the start. The start of the grid is the horizontal
+        axis on the right side.
+    </p>
+
+    <h2>Pattern of dots</h2>
+
+    <p>The pattern defines whether and how dots are plotted. Each sequence of digits applies to one ring of dots.
+        A  zero means skip the dot, a one means plot as a normal dot, a two means plot as a circle.
+        Each sequence of digits introduces a repeat factor equal to the length of the sequence.
+    </p>
+  </div>
+</body>
+</html>
