@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 
+  Copyright 2014, J. Pol
+ 
+  This file is part of free software: you can redistribute it and/or modify it under the terms of the
+  GNU General Public License as published by the Free Software Foundation.
+  
+  This package is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+  See the GNU General Public License for more details. A copy of the GNU General Public License is
+  available at <http://www.gnu.org/licenses/>.
+ -->
+    <title>DiBL polar grid</title>
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="polar-grids.css">
+    <script type="text/javascript" src="polar-grids.js"></script>
+    <script>
+    function load() {
+        dibl.PolarGrid().main(
+            document.getElementById('container'),
+            decodeURIComponent(window.location.href)
+        );
+    }
+    </script>
+</head>
+<body onload="load()">
+
+  <img align="right" src="../logo-big.png" width="78" height="72"></img>
+  <h1>Polar Grids for Bobbin Lace</h1>
+
+  <form action="">
+      <label for="style">Style </label>
+      <fieldset id="style">
+          select an example with one of the links
+          <br/>
+          <label for="angle">angle (degrees) </label>
+          <input id="angle" name="angle" type="number" min="10" max="80">
+          <br/>
+          <label for="angle">pattern of dots <a href="https://github.com/jo-pol/DiBL/wiki/About-polar-grids#pattern-of-dots">(?)</a></label>
+          <input id="dotPattern" name="dotPattern" list="dotPatterns" pattern="[012]+(,[012]+)*">
+      </fieldset>
+      <datalist id="dotPatterns">
+          <option value="011,101,211,101,011,121"></option>
+          <option value="1,1210,1,1012"></option>
+      </datalist>
+      <br/>
+      <label for="diameters">Diameters (mm) </label>
+      <fieldset id="diameters">
+          <label for="outerDiameter">outside </label><input id="outerDiameter" name="outerDiameter" type="number" min="20" autofocus>
+          <br/>
+          <label for="innerDiameter">inside </label><input id="innerDiameter" name="innerDiameter" type="number" min="10">
+      </fieldset>
+      <br/>
+      <label for="density">Dots per ring </label>
+      <fieldset id="density">
+          <label for="dotsPerRing"></label><input id="dotsPerRing" name="dotsPerRing" type="number" min="12">
+      </fieldset>
+      <br/>
+      <button class="button" type="submit">draw</button>
+      <a href="https://github.com/jo-pol/DiBL/wiki/About-polar-grids">help</a>
+      (<a href="https://github.com/jo-pol/DiBL/issues">issues</a>,
+      <a href="https://github.com/jo-pol/DiBL/commits/gh-pages/polar-grids/">changes</a>,
+      <a href="https://github.com/jo-pol/DiBL/tree/gh-pages/polar-grids">source files</a>,
+      <a href="https://github.com/jo-pol/DiBL/tree/master/web/grids/src/main/scala/dibl">scripts</a>)
+  </form>
+  <div>
+      <p>
+        The examples with B-numbers match "<span lang="de">Viele Gute Gr&uuml;nde</span>" by Ulrike L&ouml;hr.
+        The traditional Torchon grids cater for most of the  "<span lang="de">Gr&uuml;nde mit system</span>" by Ute Ulrich, 
+        a selection of some special ones are represented by 4-digit numbers.
+      </p>
+      <ul>
+        <li>Basic Torchon / Flanders:
+            <a href="?angle=45&outerDiameter=170&innerDiameter=100&dotsPerRing=120">B1</a>
+        </li>
+        <li>Torchon:
+            <a href="?angle=45&dotPattern=1,0,1011,0,1,0,1110,0&outerDiameter=170&innerDiameter=100&dotsPerRing=120">Vierge</a>,
+            <a href="?angle=45&dotPattern=11101112,0,10111211,0,11121110,0,12111011,0&outerDiameter=170&innerDiameter=100&dotsPerRing=120">3104</a>,
+            <a href="?angle=45&dotPattern=111001011121,0,001011121111,0,011121111001,0,121111001011,0&outerDiameter=170&innerDiameter=100&dotsPerRing=120">3104</a>;
+            <a href="?angle=45&dotPattern=1,10,1,01&outerDiameter=170&innerDiameter=100&dotsPerRing=120">Honeycomb</a>;
+            spiders with 
+            <a href="?angle=45&dotPattern=100,101,011,010,011,101&outerDiameter=170&innerDiameter=100&dotsPerRing=120">8</a>,
+            <a href="?angle=45&dotPattern=1001,1010,0110,0101,0110,1010,1001,0101&outerDiameter=170&innerDiameter=100&dotsPerRing=120">12</a>,
+            <a href="?angle=45&dotPattern=10001,10010,01010,01100,00100,01100,01010,10010,10001,00001&outerDiameter=170&innerDiameter=100&dotsPerRing=120">16</a>
+            legs
+        </li>
+        <li>Small snowflakes:
+            <a href="?angle=49&angle=49&dotPattern=1,0&outerDiameter=170&innerDiameter=100&dotsPerRing=120">B2</a>
+        </li>
+        <li>Binche/Duchesse:
+            <a href="?angle=63&dotPattern=1,10,1,01&outerDiameter=170&innerDiameter=100&dotsPerRing=120">B3</a>,
+            <a href="?angle=63&dotPattern=011,101,211,101,011,121&outerDiameter=170&innerDiameter=100&dotsPerRing=120">B4-B6</a>,
+            <a href="?angle=63&dotPattern=1,1210,1,1012&outerDiameter=170&innerDiameter=100&dotsPerRing=120">B7</a>
+        </li>
+        <li>Rotated hexagons:
+            with <a href="?angle=30&dotPattern=1,10,1,01&outerDiameter=170&innerDiameter=100&dotsPerRing=120">triangles</a>,
+            with <a href="?angle=30&dotPattern=1,002,1,1,020,1&outerDiameter=170&innerDiameter=100&dotsPerRing=120">circles</a>,
+            with <a href="?angle=30&dotPattern=1,1210,1,01,1,1012,1,01&outerDiameter=170&innerDiameter=100&dotsPerRing=120">triangles and circles</a>
+        </li>
+      </ul>
+    </div>
+    <div id="container"><p>Please allow JavaScript to download and execute, or try one of the links above.</p></div>
+</body>
+</html>
