@@ -4,7 +4,7 @@ enablePlugins(ScalaJSPlugin)
 
 workbenchSettings
 
-name := "DiBL-grids"
+name := "polar-grids"
 
 version := "0.1-SNAPSHOT"
 
