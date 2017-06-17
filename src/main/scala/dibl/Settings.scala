@@ -14,6 +14,8 @@
  along with this program. If not, see http://www.gnu.org/licenses/gpl.html dibl
 */
 
+package dibl
+
 import scala.util.Try
 
 case class Settings(uri: String) {
@@ -53,9 +55,9 @@ case class Settings(uri: String) {
   val maxArc: Double = Point(outerRadius, 0, 0, this).arcLength
 
   /** The size required to accommodate the grid. */
-  val canvasSize = Math.round(outerRadius * 2 + maxArc).toInt
+  val canvasSize: Int = Math.round(outerRadius * 2 + maxArc).toInt
 
-  val dotPattern = getArg("dotPattern", "1").split("[,; ]")
+  val dotPattern: Array[String] = getArg("dotPattern", "1").split("[,; ]")
   // TODO what is the subtle difference with the next?
   //private val dotPattern: Array[String] = (queryMap.getOrElse("dotPattern", Array("1")))(0).split(",; ")
 

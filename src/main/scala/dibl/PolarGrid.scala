@@ -14,12 +14,13 @@
  along with this program. If not, see http://www.gnu.org/licenses/gpl.html dibl
 */
 
-import java.net.URI
+package dibl
 
 import org.scalajs.dom
 import org.scalajs.dom.html
-import scalajs.js.annotation.JSExport
-import scalatags.JsDom.all.{canvas}
+
+import scala.scalajs.js.annotation.JSExport
+import scalatags.JsDom.all.canvas
 
 @JSExport
 object PolarGrid {
