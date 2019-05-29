@@ -46,7 +46,7 @@ object PolarGrid {
       for (dotNr <- 0 until s.dotsPerRing) {
         val point = Point(radius, dotNr, ringNr, s)
         val plotType = s.plotType(point)
-        if (plotType == '1') plotArc(point, 1).fill()
+        if (plotType == '1') plotArc(point, 1.2).fill()
         else if (plotType == '2') plotArc(point, point.arcLength / 2.0).stroke()
       }
     }
