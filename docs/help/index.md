@@ -19,6 +19,7 @@ This article is a help page for the [web-based polar grids](index).
 With the InkScape plug-in version you gain functionality but loose examples.
 
 Source code: [script], [page], see also [Hands-on Scala.js](https://lihaoyi.github.io/hands-on-scala-js/#GettingStarted) (the script language)
+
 [script]: https://github.com/d-bl/polar-grids/tree/master/web/grids/src/main/scala/dibl
 [page]: https://github.com/d-bl/polar-grids/blob/docs/
 
