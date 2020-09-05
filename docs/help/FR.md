@@ -11,11 +11,12 @@
 
 # <a name="Intro"></a>Introduction
 
-Cet article est une page d'aide pour le calcul de [grilles polaires en ligne](http://d-bl.github.io/polar-grids). Avec la version de l'extensions pour Inkscape, vous gagnez en fonctionnalités mais vous perdez les exemples.
+Cet article est une page d'aide pour le calcul de [grilles polaires en ligne](http://d-bl.github.io/polar-grids/FR). Avec la version de l'extensions pour Inkscape, vous gagnez en fonctionnalités mais vous perdez les exemples.
 
 Code source : [script], [page], voyez également [Hands-on Scala.js](https://lihaoyi.github.io/hands-on-scala-js/#GettingStarted) (à propos de la langue du script)
-[script]: https://github.com/d-bl/polar-grids/tree/master/web/grids/src/main/scala/dibl
-[page]: https://github.com/d-bl/polar-grids/blob/gh-pages/polar-grids/
+
+[script]: https://github.com/d-bl/polar-grids/tree/master/src/main/scala/dibl
+[page]: https://github.com/d-bl/polar-grids/tree/master/docs/FR.html/
 
 ## <a name="PtrAp"></a>Imprimer l'aperçu
 

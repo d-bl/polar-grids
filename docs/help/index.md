@@ -20,8 +20,8 @@ With the InkScape plug-in version you gain functionality but loose examples.
 
 Source code: [script], [page], see also [Hands-on Scala.js](https://lihaoyi.github.io/hands-on-scala-js/#GettingStarted) (the script language)
 
-[script]: https://github.com/d-bl/polar-grids/tree/master/web/grids/src/main/scala/dibl
-[page]: https://github.com/d-bl/polar-grids/blob/docs/
+[script]: https://github.com/d-bl/polar-grids/tree/master/src/main/scala/dibl
+[page]: https://github.com/d-bl/polar-grids/tree/master/docs/index.html
 
 
 # Print preview
