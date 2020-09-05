@@ -35,12 +35,12 @@
   <form action="">
       <label for="style">Style </label>
       <fieldset id="style">
-		  SC)lectionnez un exemple avec un des liens
+		  Sélectionnez un exemple avec un des liens
           <br/>
-          <label for="angle">angle (degrC)s) </label>
+          <label for="angle">angle (degrés) </label>
           <input id="angle" name="angle" type="number" min="10" max="80" value="45">
           <br/>
-          <label for="angle">ModC(le de points <a href="https://github.com/jo-pol/DiBL/wiki/About-polar-grids#Pattern-of-dots">(?)</a></label>
+          <label for="angle">Modèle de points <a href="https://github.com/d-bl/polar-grids/help#Pattern-of-dots">(?)</a></label>
           <input id="dotPattern" name="dotPattern" list="dotPatterns" value="1" pattern="[012]+(,[012]+)*">
       </fieldset>
       <datalist id="dotPatterns">
@@ -48,7 +48,7 @@
           <option value="1,1210,1,1012"></option>
       </datalist>
       <br/>
-      <label for="diameters">DiamC(tres (mm) </label>
+      <label for="diameters">Diametres (mm) </label>
       <fieldset id="diameters">
           <label for="outerDiameter">Externe </label><input id="outerDiameter" name="outerDiameter" type="number" min="20" autofocus>
           <br/>
@@ -61,16 +61,16 @@
       </fieldset>
 	  <br/>
       <button class="button" type="submit">Dessiner</button>
-      <a href="https://github.com/jo-pol/DiBL/wiki/About-polar-grids">Aide</a>
-      (<a href="https://github.com/jo-pol/DiBL/tree/gh-pages/polar-grids">Fichiers sources</a>,
-      <a href="https://github.com/jo-pol/DiBL/tree/master/web/grids/src/main/scala/dibl">Scripts</a>,
-      <a href="https://github.com/jo-pol/DiBL/issues">bogues</a>)
+      <a href="https://github.com/d-bl/polar-grids/help">Aide</a>
+      (<a href="https://github.com/d-bl/">Fichiers sources</a>,
+      <a href="https://github.com/d-bl/polar-grids/tree/master/src/main/scala/dibl">Scripts</a>,
+      <a href="https://github.com/d-bl/polar-grids/issues">bogues</a>)
   </form>
   <div>
       <p>
         Les liens vers des exemples dont le nom commence par un B proviennent du livre "<span lang="de">Viele Gute Gr&uuml;nde</span>" de Ulrike L&ouml;hr.
 		Les grilles du Torchon traditionnel conviennent C  la plupart des projets contenus dans le livre "<span lang="de">Gr&uuml;nde mit system</span>" de Ute Ulrich, 
-		une sC)lection de quelques modC(les spC)ciaux sont reprC)sentC)s par des nombres C  4 chiffres.
+		une sélection de quelques modèles spéciaux sont représentés par des nombres C  4 chiffres.
       </p>
       <ul>
         <li>Torchon de base / Flandre :
@@ -81,7 +81,7 @@
             <a href="?dotPattern=11101112,0,10111211,0,11121110,0,12111011,0&angle=45&dotsPerRing=120&outerDiameter=170&innerDiameter=100&link=3104">3104</a>,
             <a href="?dotPattern=111001011121,0,001011121111,0,011121111001,0,121111001011,0&angle=45&dotsPerRing=120&outerDiameter=170&innerDiameter=100&link=3104">3104</a>;
             <a href="?dotPattern=1,10,1,01&angle=45&dotsPerRing=120&outerDiameter=170&innerDiameter=100&link=Honeycomb">Nid d'abeille</a>;
-			AraignC)e avec 
+			Araignée avec 
 			<a href="?dotPattern=100,101,011,010,011,101&angle=45&dotsPerRing=120&outerDiameter=170&innerDiameter=100&link=8">8</a>,
 			<a href="?dotPattern=1001,1010,0110,0101,0110,1010,1001,0101&angle=45&dotsPerRing=120&outerDiameter=170&innerDiameter=100&link=8">12</a>,
 			<a href="?dotPattern=10001,10010,01010,01100,00100,01100,01010,10010,10001,00001&angle=45&dotsPerRing=120&outerDiameter=170&innerDiameter=100&link=8">16</a>
@@ -95,13 +95,13 @@
             <a href="?dotPattern=011,101,211,101,011,121&angle=63&dotsPerRing=120&outerDiameter=170&innerDiameter=100&link=B4">B4-B6</a>,
             <a href="?dotPattern=1,1210,1,1012&angle=63&dotsPerRing=120&outerDiameter=170&innerDiameter=100&link=B7">B7</a>
         </li>
-        <li>Hexagones retournC)s :
+        <li>Hexagones retournés :
             avec <a href="?dotPattern=1,10,1,01&angle=30&dotsPerRing=120&outerDiameter=170&innerDiameter=100">triangles</a>,
             avec <a href="?dotPattern=1,002,1,1,020,1&angle=30&dotsPerRing=120&outerDiameter=170&innerDiameter=100">cercles</a>,
             avec <a href="?angle=30&dotPattern=1,1210,1,01,1,1012,1,01&dotsPerRing=120&outerDiameter=170&innerDiameter=100">triangles et cercles</a>
         </li>
       </ul>
     </div>
-    <div id="container"><p>Vous devez permettre au script java de tC)lC)charger et d'exC)cuter, ou bien essayez un des liens ci-dessus.</p></div>
+    <div id="container"><p>Vous devez permettre au script java de télécharger et d'exécuter, ou bien essayez un des liens ci-dessus.</p></div>
 </body>
 </html>
