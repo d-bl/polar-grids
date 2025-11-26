@@ -6,7 +6,7 @@
   * [Diameters](#diameters)
   * [Dots per ring](#dots-per-ring)
   * [Pattern of dots](#pattern-of-dots)
-* [Vierge](#Vierge)
+* [Vierge](#vierge)
 
 
 # Introduction
